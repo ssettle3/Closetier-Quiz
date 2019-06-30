@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
+import styled from "styled-components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Header } from "./components/Header";
+import { Quiz } from "./components/Quiz";
+import { Theme } from "./components/Theme";
+import { Welcome } from "./components/Welcome";
+
+const Body = styled.div`
+  padding: 50px;
+`;
+
+class App extends Component {
+  state = {
+    answers: {},
+    email: "",
+    name: ""
+  };
+
+  render() {
+    return (
+      <Theme>
+        <Router>
+          <Header />
+          <Body>
+            <Switch>
+              <Route exact path="/quiz" component={Welcome} />
+              <Route exact path="/quiz/questions" component={Quiz} />
+              <Redirect from="/" to="/quiz" />
+            </Switch>
+          </Body>
+        </Router>
+      </Theme>
+    );
+  }
 }
 
 export default App;

@@ -1,7 +1,7 @@
 {
   "name": "closetier-quiz",
   "version": "0.1.0",
-  "homepage": "https://ssettle3.github.io",
+  "homepage": "https://ssettle3.github.io/closetier-quiz",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

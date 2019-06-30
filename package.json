@@ -1,7 +1,7 @@
 {
   "name": "closetier-quiz",
   "version": "0.1.0",
-  "homepage": "https://ssettle3.github.io",
+  "homepage": "https://ssettle3.github.io/Closetier-Quiz",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",

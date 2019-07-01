@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/closetier-quiz/static/css/main.34de6062.chunk.css",
-    "main.js": "/closetier-quiz/static/js/main.cd0725c4.chunk.js",
-    "main.js.map": "/closetier-quiz/static/js/main.cd0725c4.chunk.js.map",
-    "runtime~main.js": "/closetier-quiz/static/js/runtime~main.647348a8.js",
-    "runtime~main.js.map": "/closetier-quiz/static/js/runtime~main.647348a8.js.map",
-    "static/js/2.c9e163f1.chunk.js": "/closetier-quiz/static/js/2.c9e163f1.chunk.js",
-    "static/js/2.c9e163f1.chunk.js.map": "/closetier-quiz/static/js/2.c9e163f1.chunk.js.map",
-    "index.html": "/closetier-quiz/index.html",
-    "precache-manifest.779d4125f5ba104090548c9e55a20332.js": "/closetier-quiz/precache-manifest.779d4125f5ba104090548c9e55a20332.js",
-    "service-worker.js": "/closetier-quiz/service-worker.js",
-    "static/css/main.34de6062.chunk.css.map": "/closetier-quiz/static/css/main.34de6062.chunk.css.map"
+    "main.css": "/Closetier-Quiz/static/css/main.34de6062.chunk.css",
+    "main.js": "/Closetier-Quiz/static/js/main.f1a8968a.chunk.js",
+    "main.js.map": "/Closetier-Quiz/static/js/main.f1a8968a.chunk.js.map",
+    "runtime~main.js": "/Closetier-Quiz/static/js/runtime~main.e9d718f7.js",
+    "runtime~main.js.map": "/Closetier-Quiz/static/js/runtime~main.e9d718f7.js.map",
+    "static/js/2.ebcaecba.chunk.js": "/Closetier-Quiz/static/js/2.ebcaecba.chunk.js",
+    "static/js/2.ebcaecba.chunk.js.map": "/Closetier-Quiz/static/js/2.ebcaecba.chunk.js.map",
+    "index.html": "/Closetier-Quiz/index.html",
+    "precache-manifest.4239b35d375be3d6f2faef9b000b2160.js": "/Closetier-Quiz/precache-manifest.4239b35d375be3d6f2faef9b000b2160.js",
+    "service-worker.js": "/Closetier-Quiz/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/Closetier-Quiz/static/css/main.34de6062.chunk.css.map"
   }
 }

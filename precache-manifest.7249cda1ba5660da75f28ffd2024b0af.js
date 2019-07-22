@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c9511cc24872948c5492afed5604767",
+    "revision": "a71d93efa71a25bff7a6fee2fdf8731e",
     "url": "/Closetier-Quiz/index.html"
   },
   {
-    "revision": "79f308125f5b277fac45",
+    "revision": "f92317ccf9a779cde6f3",
     "url": "/Closetier-Quiz/static/css/main.34f59578.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Closetier-Quiz/static/js/2.a06f0bd7.chunk.js"
   },
   {
-    "revision": "79f308125f5b277fac45",
-    "url": "/Closetier-Quiz/static/js/main.60b1cd60.chunk.js"
+    "revision": "f92317ccf9a779cde6f3",
+    "url": "/Closetier-Quiz/static/js/main.669e409a.chunk.js"
   },
   {
     "revision": "116f50d750c140c66df8",

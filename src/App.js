@@ -14,6 +14,10 @@ import { Welcome } from "./components/Welcome";
 
 const Body = styled.div`
   padding: 50px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 15px;
+  }
 `;
 
 class App extends Component {

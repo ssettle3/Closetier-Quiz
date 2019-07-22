@@ -51,7 +51,7 @@ export function Info(props) {
       <Input
         type="text"
         defaultValue={props.email}
-        placeholder="ex: Hillary"
+        placeholder="ex: youremail@example.com"
         onChange={e => props.onChange("name", e.target.value, false)}
       />
       <Button

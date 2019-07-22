@@ -17,6 +17,10 @@ const Text = styled.div`
   font-size: 15px;
   line-height: 35px;
   font-style: italic;
+
+  @media only screen and (max-width: 600px) {
+    margin: 50px;
+  }
 `;
 
 const BoldText = styled.span`

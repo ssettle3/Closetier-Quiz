@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 50px;
   text-transform: uppercase;
+  text-align: center;
   font-size: 30px;
   letter-spacing: 10px;
 `;

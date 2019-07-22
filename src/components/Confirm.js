@@ -25,6 +25,10 @@ const ImageWrapper = styled.div`
   height: 390px;
   overflow: hidden;
   margin-bottom: 30px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 15px;
+  }
 `;
 
 export function Confirm({ name }) {

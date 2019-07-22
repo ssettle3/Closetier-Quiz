@@ -3,6 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Question } from "./Question";
 
+import { Button } from "./common/Button";
+
+import day from "../images/day.jpg";
+import work from "../images/work.jpg";
+import play from "../images/play.jpg";
+
+import { Image } from "../images/Image";
+
 const Wrapper = styled.div`
   align-items: center;
   display: flex;
@@ -10,16 +18,24 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
+const occasionComponents = {
+  work: <Image src={work} />,
+  day: <Image src={day} />,
+  play: <Image src={play} />
+};
+
 const Choice = styled.div`
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: yellow;
-  border: ${props => (props.selected ? "1px solid black" : "none")};
   cursor: pointer;
   display: flex;
-  height: 80px;
   justify-content: center;
   margin: 20px;
-  width: 80px;
+
+  img {
+    width: 250px;
+  }
 `;
 
 const ChoicesWrapper = styled.div`
@@ -28,22 +44,28 @@ const ChoicesWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const choices = ["Work", "Day", "Play"];
-const question = "What occasion of outfit are you looking for?";
+const choices = ["work", "day", "play"];
+const question = "What's the occasion?";
 const key = "occasion";
 
 export function Occasion(props) {
+  const handleClick = (key, choice) => {
+    props.onSelect(key, choice);
+  };
+
   return (
     <Wrapper>
       <Question question={question} />
       <ChoicesWrapper>
         {choices.map(choice => (
-          <Choice
-            key={choice}
-            onClick={() => props.onSelect(key, choice)}
-            selected={props.currentSelection === choice}
-          >
-            {choice}
+          <Choice key={choice} onClick={() => handleClick(key, choice)}>
+            {occasionComponents[choice]}
+            <Button
+              currentSelection={props.currentSelection}
+              selected={props.currentSelection === choice}
+              margin={"-10px 0 0 0"}
+              text={choice}
+            />
           </Choice>
         ))}
       </ChoicesWrapper>

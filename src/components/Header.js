@@ -6,12 +6,15 @@ const ExitQuiz = styled.a`
   color: lightgray;
   text-decoration: none;
   font-size: 35px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
 `;
 
 const Wrapper = styled.div`
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 15px;
 `;
 

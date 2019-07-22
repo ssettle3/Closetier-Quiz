@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   color: #3c4043;
   flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 `;
 
 export function Theme({ children }) {

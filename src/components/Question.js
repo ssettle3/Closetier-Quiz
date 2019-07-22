@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 50px;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
 `;
 
 export function Question(props) {

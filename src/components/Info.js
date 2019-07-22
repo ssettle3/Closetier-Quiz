@@ -1,6 +1,10 @@
 import React from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+import { Question } from "./Question";
+import { Button } from "./common/Button";
 
 const Wrapper = styled.div`
   display: flex;
@@ -9,25 +13,51 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Header = styled.div`
-  font-size: 20px;
-`;
-
 const Input = styled.input`
   padding: 10px;
+  width: 275px;
+`;
+
+const InputLabel = styled.div`
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin: 15px 0 5px 0;
 `;
 
 export function Info(props) {
+  const signUp = nextQuestion => {
+    // try {
+    //   axios.post("https://closetier.us18.list-manage.com/subscribe/post", {
+    //     email: email
+    //   });
+    // } catch (e) {
+    //   console.log(`😱 Axios request failed: ${e}`);
+    // }
+    nextQuestion();
+  };
+
   return (
     <Wrapper>
-      <Header>
-        So rude of us not to ask before getting you outfitted, what's your name?
-      </Header>
+      <Question question="You're almost ready to get dressed" />
+      <InputLabel>Enter your name</InputLabel>
       <Input
         type="text"
         defaultValue={props.name}
         placeholder="ex: Hillary"
-        onChange={e => props.onChange("name", e.target.value)}
+        onChange={e => props.onChange("name", e.target.value, false)}
+      />
+      <InputLabel>Enter your email</InputLabel>
+      <Input
+        type="text"
+        defaultValue={props.email}
+        placeholder="ex: Hillary"
+        onChange={e => props.onChange("name", e.target.value, false)}
+      />
+      <Button
+        text="submit"
+        margin={"25px 0 0 0"}
+        onClick={() => signUp(props.nextQuestion)}
       />
     </Wrapper>
   );
@@ -35,5 +65,6 @@ export function Info(props) {
 
 Info.propTypes = {
   name: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  nextQuestion: PropTypes.func
 };

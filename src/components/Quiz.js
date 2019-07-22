@@ -2,7 +2,6 @@ import React, { Fragment, Component } from "react";
 
 import { Budget } from "./Budget";
 import { Confirm } from "./Confirm";
-import { FunFact } from "./FunFact";
 import { Info } from "./Info";
 import { Nav } from "./Nav";
 import { Occasion } from "./Occasion";
@@ -33,7 +32,14 @@ export class Quiz extends Component {
         ...state.answers,
         [key]: value
       },
-      [key]: value
+      [key]: value,
+      currentStep: state.currentStep + 1
+    }));
+  };
+
+  nextQuestion = () => {
+    this.setState(state => ({
+      currentStep: state.currentStep + 1
     }));
   };
 
@@ -55,14 +61,8 @@ export class Quiz extends Component {
     }, 2000);
   };
 
-  nextQuestion = () => {
-    this.setState(state => ({
-      currentStep: state.currentStep + 1
-    }));
-  };
-
   render() {
-    const { answers, currentStep, name } = this.state;
+    const { answers, currentStep, name, email } = this.state;
 
     return (
       <Fragment>
@@ -79,19 +79,24 @@ export class Quiz extends Component {
             currentSelection={answers.occasionType}
           />
         )}
-        {this.isStep(3) && <FunFact />}
-        {this.isStep(4) && (
+        {this.isStep(3) && (
           <Budget
             currentSelection={answers.budget}
             onSelect={this.recordSelection}
           />
         )}
-        {this.isStep(5) && <Info name={name} onChange={this.recordSelection} />}
-        {this.isStep(6) && <Confirm name={name} />}
+        {this.isStep(4) && (
+          <Info
+            name={name}
+            email={email}
+            onChange={this.recordSelection}
+            nextQuestion={this.nextQuestion}
+          />
+        )}
+        {this.isStep(5) && <Confirm name={name} />}
 
         <Nav
           currentStep={currentStep}
-          nextQuestion={this.nextQuestion}
           goBack={this.goBack}
           submit={this.submit}
         />

@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import { Question } from "./Question";
+import { Button } from "./common/Button";
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,39 +12,26 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Header = styled.div`
-  font-size: 15px;
-  margin-bottom: 15px;
-`;
-
 const BudgetWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const Item = styled.div`
-  background-color: ${props => (props.selected ? "orange" : "none")};
-  border: 1px solid black;
-  cursor: pointer;
-  margin-bottom: 15px;
-  padding: 20px;
-`;
-
-const budgetItems = ["$50 - $75", "$75 - $100", "$100 - $150"];
+const budgetItems = ["$75 - $99", "$100 - $124", "No Budget!"];
 
 export function Budget({ currentSelection, onSelect }) {
   return (
     <Wrapper>
-      <Header>What’s your outfit budget?</Header>
+      <Question question="What’s your outfit budget?" />
       <BudgetWrapper>
         {budgetItems.map(item => (
-          <Item
+          <Button
             selected={currentSelection === item}
             key={item}
+            text={item}
             onClick={() => onSelect("budget", item)}
-          >
-            {item}
-          </Item>
+            margin="20px 0 0 0"
+          />
         ))}
       </BudgetWrapper>
     </Wrapper>

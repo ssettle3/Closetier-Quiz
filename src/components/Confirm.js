@@ -2,6 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import { Question } from "./Question";
+import { Button } from "./common/Button";
+
+import { Image } from "../images/Image";
+import ending from "../images/ending.jpg";
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,20 +15,29 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
+const Greeting = styled.div`
+  font-style: italic;
+  font-weight: bold;
+`;
+
+const ImageWrapper = styled.div`
+  border-radius: 100%;
+  height: 390px;
+  overflow: hidden;
+  margin-bottom: 30px;
+`;
+
 export function Confirm({ name }) {
   return (
     <Wrapper>
-      <div>Hey {name}</div>
-      <div>
-        Ready to get your recommended outfits?
-        <a href="https://closetier.com">Get my outfits!</a>
-      </div>
-
-      <div>
-        Want to receive new outfits every week? Give us your email and sign up!
-      </div>
-      <input type="text" placeholder="youremail@example.com" />
-      <button>Sign Up</button>
+      <Greeting>
+        Hey {name}, thank you for taking the Closetier Style Quiz!
+      </Greeting>
+      <Question question="Ready to see what you're wearing?" />
+      <ImageWrapper>
+        <Image src={ending} />
+      </ImageWrapper>
+      <Button text="Let's Go!" />
     </Wrapper>
   );
 }

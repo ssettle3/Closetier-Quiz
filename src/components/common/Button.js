@@ -37,6 +37,12 @@ const BackButton = styled.div`
   img {
     width: 40px;
   }
+
+  @media only screen and (max-width: 600px) {
+    position: fixed;
+    left: 0;
+    top: 50%;
+  }
 `;
 
 export function Button({ onClick, text, currentSelection, margin, type }) {

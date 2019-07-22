@@ -9,6 +9,10 @@ const ExitQuiz = styled.a`
   position: absolute;
   right: 15px;
   top: 20px;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Wrapper = styled.div`

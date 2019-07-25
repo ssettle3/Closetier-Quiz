@@ -24,6 +24,10 @@ const Wrapper = styled.div`
 
 const Logo = styled.img`
   width: 400px;
+
+  @media only screen and (max-width: 600px) {
+    width: 220px;
+  }
 `;
 
 export function Header() {

@@ -15,7 +15,11 @@ const Wrapper = styled.div`
 
 const Input = styled.input`
   padding: 10px;
-  width: 275px;
+  width: 300px;
+  height: 25px;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0px 0px 3px 0px lightgray;
 `;
 
 const InputLabel = styled.div`
@@ -37,6 +41,11 @@ export function Info(props) {
     nextQuestion();
   };
 
+  const isDisabled = () => {
+    const emailRegex = /(.+)@(.+){2,}\.(.+){2,}/;
+    return !props.name || !emailRegex.test(props.email);
+  };
+
   return (
     <Wrapper>
       <Question question="You're almost ready to get dressed" />
@@ -44,17 +53,16 @@ export function Info(props) {
       <Input
         type="text"
         defaultValue={props.name}
-        placeholder="ex: Hillary"
         onChange={e => props.onChange("name", e.target.value, false)}
       />
       <InputLabel>Enter your email</InputLabel>
       <Input
         type="text"
         defaultValue={props.email}
-        placeholder="ex: youremail@example.com"
-        onChange={e => props.onChange("name", e.target.value, false)}
+        onChange={e => props.onChange("email", e.target.value, false)}
       />
       <Button
+        isDisabled={isDisabled()}
         text="submit"
         margin={"25px 0 0 0"}
         onClick={() => signUp(props.nextQuestion)}

@@ -5,9 +5,9 @@ import { Question } from "./Question";
 
 import { Button } from "./common/Button";
 
-import day from "../images/day.jpg";
-import work from "../images/work.jpg";
-import play from "../images/play.jpg";
+import day from "../images/day.png";
+import work from "../images/work.png";
+import play from "../images/play.png";
 
 import { Image } from "../images/Image";
 
@@ -34,7 +34,7 @@ const Choice = styled.div`
   margin: 20px;
 
   img {
-    width: 250px;
+    width: 300px;
   }
 `;
 

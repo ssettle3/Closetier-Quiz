@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 import { Question } from "./Question";
 import { Button } from "./common/Button";
 
-import brunch from "../images/brunch.jpg";
+import brunch from "../images/brunch.png";
 import casual from "../images/casual.png";
-import datenight from "../images/datenight.jpg";
+import datenight from "../images/datenight.png";
 import girlsnight from "../images/girlsnight.jpg";
 import hanging from "../images/hangingout.jpg";
-import play from "../images/play.jpg";
+import play from "../images/play.png";
 import polished from "../images/polished.png";
 import shopping from "../images/shopping.jpg";
 import totallychill from "../images/totallychill.jpg";
@@ -44,7 +44,7 @@ const Choice = styled.div`
   margin: 20px;
 
   img {
-    width: 250px;
+    width: 300px;
   }
 `;
 

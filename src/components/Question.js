@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   text-align: center;
   font-size: 30px;
   letter-spacing: 10px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 25px;
+  }
 `;
 
 export function Question(props) {

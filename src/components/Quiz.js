@@ -26,14 +26,16 @@ export class Quiz extends Component {
     return this.state.currentStep === step;
   };
 
-  recordSelection = (key, value) => {
+  recordSelection = (key, value, goToNext) => {
+    const goNext = goToNext === undefined ? true : false;
+
     this.setState(state => ({
       answers: {
         ...state.answers,
         [key]: value
       },
       [key]: value,
-      currentStep: state.currentStep + 1
+      currentStep: goNext ? state.currentStep + 1 : state.currentStep
     }));
   };
 

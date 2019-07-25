@@ -6,18 +6,20 @@ import back from "../../images/back.png";
 
 const StyledButton = styled.button`
   align-items: center;
-  background: ${props => (props.selected ? "black" : "#ffe8e2")};
+  background: ${props => (props.selected ? "#ffe8e2" : "black")};
   border-radius: 2px;
-  border: 1px solid #ffe8e2;
+  border: ${props =>
+    props.selected ? "1px solid #ffe8e2" : "1px solid black;"};
   cursor: pointer;
-  color: ${props => (props.selected ? "white" : "black")};
+  font-size: 15px;
+  color: ${props => (props.selected ? "black" : "white")};
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: ${props => (props.margin ? props.margin : "none")};
   margin-right: 5px;
-  padding: 10px;
-  width: 150px;
+  padding: 9px;
+  width: 170px;
   letter-spacing: 3px;
   text-transform: uppercase;
 
@@ -25,6 +27,11 @@ const StyledButton = styled.button`
   &:focus {
     border: 1px solid #ffe8e2;
     outline: none;
+  }
+
+  &:disabled {
+    background: lightgray;
+    border: 1px solid lightgray;
   }
 `;
 
@@ -45,7 +52,14 @@ const BackButton = styled.div`
   }
 `;
 
-export function Button({ onClick, text, currentSelection, margin, type }) {
+export function Button({
+  onClick,
+  text,
+  currentSelection,
+  margin,
+  type,
+  isDisabled
+}) {
   return (
     <Fragment>
       {type === "back" && (
@@ -56,6 +70,7 @@ export function Button({ onClick, text, currentSelection, margin, type }) {
       {type === "default" && (
         <StyledButton
           margin={margin}
+          disabled={isDisabled}
           selected={currentSelection === text}
           onClick={onClick}
         >
@@ -68,12 +83,14 @@ export function Button({ onClick, text, currentSelection, margin, type }) {
 
 Button.defaultProps = {
   selected: false,
-  type: "default"
+  type: "default",
+  isDisabled: false
 };
 
 Button.propTypes = {
   currentSelection: PropTypes.string,
   margin: PropTypes.string,
+  isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
   selected: PropTypes.bool,
   text: PropTypes.string.isRequired,

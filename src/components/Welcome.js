@@ -37,7 +37,7 @@ const Header = styled.div`
 export function Welcome() {
   return (
     <Wrapper>
-      <Header>What are you wearing?</Header>
+      <Header>Ready to find your next outfit?</Header>
       <Text>
         find out with the <BoldText>Closetier Style Quiz</BoldText> and get
         matched with outfits for <BoldText>work, day, play</BoldText>

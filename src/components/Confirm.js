@@ -17,25 +17,33 @@ const Wrapper = styled.div`
 
 const Greeting = styled.div`
   font-style: italic;
-  font-weight: bold;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
 `;
 
 const ImageWrapper = styled.div`
   border-radius: 100%;
-  height: 390px;
+  height: 350px;
+  width: 350px;
   overflow: hidden;
   margin-bottom: 30px;
 
-  @media only screen and (max-width: 600px) {
-    padding: 15px;
+  img {
+    width: 350px;
   }
+`;
+
+const BoldText = styled.span`
+  font-weight: bold;
 `;
 
 export function Confirm({ name }) {
   return (
     <Wrapper>
       <Greeting>
-        Hey {name}, thank you for taking the Closetier Style Quiz!
+        Hey <BoldText>{name}</BoldText>, thank you for taking the Closetier
+        Style Quiz!
       </Greeting>
       <Question question="Ready to see what you're wearing?" />
       <ImageWrapper>

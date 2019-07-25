@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Closetier-Quiz/precache-manifest.4a8fb0a2600f59bb179637f50495ad22.js"
+  "/Closetier-Quiz/precache-manifest.6c64a8b16bed7a952241c8682fd8249e.js"
 );
 
 self.addEventListener('message', (event) => {

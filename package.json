@@ -4,7 +4,7 @@
   "homepage": "https://ssettle3.github.io/Closetier-Quiz",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "gh-pages": "^2.0.1",
     "loaders.css": "^0.1.2",
     "prop-types": "^15.7.2",
